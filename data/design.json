@@ -32,11 +32,22 @@
     }
   ],
   "mosaicOrder": [
-    "night-drive",
-    "echoes",
-    "fragments",
-    "aurora",
-    "voids",
-    "debut-ep"
-  ]
+    "chat-dit-quoi-la-zone",
+    "j-ai-mis-le-kaks",
+    "neon-instinct"
+  ],
+  "mosaicGrid": [
+    [
+      "chat-dit-quoi-la-zone"
+    ],
+    [
+      "j-ai-mis-le-kaks"
+    ],
+    [
+      "neon-instinct"
+    ],
+    [],
+    []
+  ],
+  "mosaicAlignBottom": false
 }
