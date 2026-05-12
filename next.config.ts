@@ -10,11 +10,12 @@ const nextConfig: NextConfig = {
   output: isVercel ? undefined : "standalone",
   // Vercel provides sharp natively; bundling it blows the 250MB function limit
   serverExternalPackages: isVercel ? ["sharp"] : [],
-  experimental: isVercel ? {
+  // Next.js 16: top-level (moved out of experimental)
+  ...(isVercel && {
     outputFileTracingExcludes: {
       "*": ["node_modules/sharp/**", "node_modules/@swc/core*/**"],
     },
-  } : {},
+  }),
   images: {
     formats: ["image/avif", "image/webp"],
   },
