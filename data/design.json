@@ -11,24 +11,8 @@
   "gridColumns": 5,
   "categories": [
     {
-      "value": "electronic",
-      "label": "Electronic"
-    },
-    {
       "value": "hip-hop",
       "label": "Hip-Hop"
-    },
-    {
-      "value": "ambient",
-      "label": "Ambient"
-    },
-    {
-      "value": "r&b",
-      "label": "R&B"
-    },
-    {
-      "value": "pop",
-      "label": "Pop"
     }
   ],
   "mosaicOrder": [
