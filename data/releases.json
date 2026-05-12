@@ -145,49 +145,46 @@
     }
   },
   {
-    "slug": "voids",
+    "slug": "aurora",
     "title": {
-      "fr": "Voids",
-      "en": "Voids"
+      "fr": "Aurora",
+      "en": "Aurora"
     },
-    "genre": "ambient",
-    "releaseType": "ep",
+    "genre": "electronic",
+    "releaseType": "single",
     "year": "2022",
     "features": [],
     "description": {
-      "fr": "EP de trois titres expérimentaux. Drone, silence et résonances.",
-      "en": "Three-track experimental EP. Drone, silence and resonances."
+      "fr": "Single prod. club, kick 808 et arpèges cristallins. Sorti en édition limitée vinyle.",
+      "en": "Club-oriented single, 808 kick and crystalline arpeggios. Released as limited vinyl edition."
     },
     "cover": "",
     "color": "transparent",
     "tracklist": [
       {
-        "title": "Void I",
-        "duration": "8:10",
+        "title": "Aurora",
+        "duration": "5:48",
         "features": []
       },
       {
-        "title": "Void II",
-        "duration": "9:35",
-        "features": []
-      },
-      {
-        "title": "Void III",
-        "duration": "6:50",
+        "title": "Aurora (Dub Mix)",
+        "duration": "7:03",
         "features": []
       }
     ],
     "audioPreview": "",
     "streamingLinks": {
+      "spotify": "https://open.spotify.com/track/placeholder",
+      "soundcloud": "https://soundcloud.com/placeholder",
       "bandcamp": "https://placeholder.bandcamp.com"
     },
     "gallery": [],
     "scatter": {
-      "x": 55,
-      "y": 60,
-      "width": 270,
-      "rotation": 3,
-      "zIndex": 5
+      "x": 20,
+      "y": 50,
+      "width": 290,
+      "rotation": -1,
+      "zIndex": 4
     }
   },
   {
