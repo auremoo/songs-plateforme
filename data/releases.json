@@ -1,5 +1,43 @@
 [
   {
+    "slug": "neon-instinct",
+    "title": {
+      "fr": "Neon Instinct",
+      "en": "Neon Instinct"
+    },
+    "genre": "electronic",
+    "releaseType": "single",
+    "year": "2026",
+    "features": [
+      "Travis Scott"
+    ],
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "cover": "",
+    "color": "#1A1A1A",
+    "tracklist": [
+      {
+        "title": "Neon Instinct",
+        "duration": "2:00",
+        "features": [
+          "Travis Scott"
+        ]
+      }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {},
+    "gallery": [],
+    "scatter": {
+      "x": 10,
+      "y": 10,
+      "width": 280,
+      "rotation": 0,
+      "zIndex": 1
+    }
+  },
+  {
     "slug": "j-ai-mis-le-kaks",
     "title": {
       "fr": "J'ai mis le Kaks",
