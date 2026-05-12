@@ -3,23 +3,22 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
+const isVercel = process.env.VERCEL === "1";
+
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // standalone only for Docker/Fly.io — Vercel handles its own output
+  output: isVercel ? undefined : "standalone",
+  // Vercel provides sharp natively; bundling it blows the 250MB function limit
+  serverExternalPackages: isVercel ? ["sharp"] : [],
   images: {
     formats: ["image/avif", "image/webp"],
   },
-  // In standalone mode, Next.js doesn't serve public/ files automatically.
-  // Rewrite uploaded file requests to the API route that reads from disk.
+  // Rewrites are only needed in standalone mode (public/ not served by Next.js)
   async rewrites() {
+    if (isVercel) return [];
     return [
-      {
-        source: "/images/:path*",
-        destination: "/api/files/images/:path*",
-      },
-      {
-        source: "/fonts/:path*",
-        destination: "/api/files/fonts/:path*",
-      },
+      { source: "/images/:path*", destination: "/api/files/images/:path*" },
+      { source: "/fonts/:path*", destination: "/api/files/fonts/:path*" },
     ];
   },
 };
