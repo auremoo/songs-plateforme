@@ -42,6 +42,12 @@
       "width": 280,
       "rotation": 0,
       "zIndex": 1
+    },
+    "coverCrop": {
+      "x": 0,
+      "y": 0,
+      "width": 100,
+      "height": 100
     }
   },
   {
