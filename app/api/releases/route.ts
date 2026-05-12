@@ -8,6 +8,22 @@ export async function GET() {
   return NextResponse.json(releases);
 }
 
+export async function DELETE(request: Request) {
+  if (!(await isAuthenticated())) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const { slugs }: { slugs: string[] } = await request.json();
+  if (!Array.isArray(slugs) || slugs.length === 0) {
+    return NextResponse.json({ error: "No slugs provided" }, { status: 400 });
+  }
+
+  const releases = await getReleases();
+  const filtered = releases.filter((r) => !slugs.includes(r.slug));
+  await saveReleases(filtered);
+  return NextResponse.json({ deleted: releases.length - filtered.length });
+}
+
 export async function POST(request: Request) {
   if (!(await isAuthenticated())) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
