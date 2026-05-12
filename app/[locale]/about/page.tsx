@@ -18,12 +18,18 @@ export async function generateMetadata({
 
 export default async function AboutPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ a?: string }>;
 }) {
   const { locale } = await params;
+  const { a } = await searchParams;
   setRequestLocale(locale);
-  const info = await getPersonalInfo();
 
-  return <AboutGrid info={info} />;
+  const info = await getPersonalInfo();
+  const artist =
+    info.artists.find((ar) => ar.id === a) ?? info.artists[0];
+
+  return <AboutGrid artist={artist} />;
 }

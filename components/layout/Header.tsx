@@ -1,16 +1,87 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import { useSearchParams } from "next/navigation";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { motion, AnimatePresence } from "framer-motion";
+import type { Artist } from "@/types";
 
-export function Header() {
+interface HeaderProps {
+  artists?: Artist[];
+}
+
+function ArtistTabsInner({
+  artists,
+  isDark,
+  onNavigate,
+}: {
+  artists: Artist[];
+  isDark: boolean;
+  onNavigate?: () => void;
+}) {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const activeId =
+    pathname === "/about"
+      ? (searchParams.get("a") ?? artists[0]?.id)
+      : null;
+
+  return (
+    <>
+      {artists.map((artist) => {
+        const isActive = activeId === artist.id;
+        return (
+          <Link
+            key={artist.id}
+            href={`/about?a=${artist.id}`}
+            onClick={onNavigate}
+            className={`text-xs px-2.5 py-1 border transition-colors ${
+              isDark
+                ? `border-offwhite/25 ${
+                    isActive
+                      ? "bg-offwhite/15 text-offwhite"
+                      : "text-offwhite/55 hover:text-offwhite/80"
+                  }`
+                : `border-noir/20 ${
+                    isActive
+                      ? "bg-noir/8 text-noir"
+                      : "text-gris hover:text-noir"
+                  }`
+            }`}
+          >
+            {artist.name}
+          </Link>
+        );
+      })}
+    </>
+  );
+}
+
+function ArtistTabs({
+  artists,
+  isDark,
+  onNavigate,
+}: {
+  artists: Artist[];
+  isDark: boolean;
+  onNavigate?: () => void;
+}) {
+  return (
+    <Suspense fallback={null}>
+      <ArtistTabsInner artists={artists} isDark={isDark} onNavigate={onNavigate} />
+    </Suspense>
+  );
+}
+
+export function Header({ artists = [] }: HeaderProps) {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const isDark = pathname === "/about";
+  const showSwitcher = artists.length >= 2;
+  const siteName = artists[0]?.name ?? "M";
 
   const navLinks = [
     { href: "/" as const, label: t("music") },
@@ -25,12 +96,15 @@ export function Header() {
       >
         <div className="flex items-center justify-between px-3 sm:px-4 h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className={`font-display text-lg tracking-tight ${isDark ? "text-offwhite" : ""}`}>
-            Artist Name
+          <Link
+            href="/"
+            className={`font-display text-lg tracking-tight ${isDark ? "text-offwhite" : ""}`}
+          >
+            {siteName}
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -44,6 +118,11 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+            {showSwitcher && (
+              <div className="flex items-center gap-1">
+                <ArtistTabs artists={artists} isDark={isDark} />
+              </div>
+            )}
             <LocaleSwitcher isDark={isDark} />
           </nav>
 
@@ -99,6 +178,20 @@ export function Header() {
                 </Link>
               </motion.div>
             ))}
+            {showSwitcher && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + navLinks.length * 0.08, duration: 0.3 }}
+                className="flex items-center gap-2"
+              >
+                <ArtistTabs
+                  artists={artists}
+                  isDark={isDark}
+                  onNavigate={() => setMenuOpen(false)}
+                />
+              </motion.div>
+            )}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

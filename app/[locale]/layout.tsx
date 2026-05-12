@@ -57,6 +57,8 @@ export default async function LocaleLayout({
   const personalInfo = await getPersonalInfo();
   const design = await getDesignSettings();
 
+  const primaryArtist = personalInfo.artists[0];
+
   // Password gate check (production only)
   if (
     process.env.NODE_ENV === "production" &&
@@ -124,13 +126,13 @@ export default async function LocaleLayout({
       </head>
       <body className="flex flex-col min-h-screen">
         <NextIntlClientProvider messages={messages}>
-          <Loader name={personalInfo.name} />
+          <Loader name={primaryArtist?.name ?? ""} />
           <CustomCursor />
-          <Header />
+          <Header artists={personalInfo.artists} />
           <PageTransition>
             <main className="flex-1 flex flex-col">{children}</main>
           </PageTransition>
-          <Footer socials={personalInfo.socials.filter((s) => s.visible !== false)} />
+          <Footer socials={(primaryArtist?.socials ?? []).filter((s) => s.visible !== false)} />
         </NextIntlClientProvider>
       </body>
     </html>

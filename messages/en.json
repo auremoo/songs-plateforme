@@ -27,16 +27,12 @@
     "allReleases":  "All releases"
   },
   "about": {
-    "manifesto":  "Manifesto",
-    "bio":        "Bio",
-    "pressKit":   "Press Kit",
-    "skills":     "Skills",
-    "experience": "Career",
-    "education":  "Education",
-    "contact":    "Contact",
-    "socials":    "Social",
-    "location":   "Location",
-    "available":  "Available for new projects"
+    "bio":      "Bio",
+    "contact":  "Contact",
+    "location": "Location",
+    "label":    "Label",
+    "styles":   "Musical styles",
+    "credits":  "Credits"
   },
   "footer": {
     "copyright": "© {year} Artist Name"

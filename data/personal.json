@@ -1,52 +1,33 @@
 {
-  "name": "Artist Name",
-  "title": {
-    "fr": "Musicien · Producteur",
-    "en": "Musician · Producer"
-  },
-  "bio": {
-    "fr": "Biographie de l'artiste à renseigner. Décris ton univers sonore, tes influences, ta démarche.",
-    "en": "Artist biography to fill in. Describe your sonic universe, influences, and creative approach."
-  },
-  "portrait": "/images/portrait.jpg",
-  "email": "contact@artistname.com",
-  "location": {
-    "fr": "Paris, France",
-    "en": "Paris, France"
-  },
-  "cvUrl": "/images/press-kit.pdf",
-  "socials": [
-    { "label": "Spotify",    "url": "https://open.spotify.com/artist/...", "visible": true },
-    { "label": "SoundCloud", "url": "https://soundcloud.com/...",          "visible": true },
-    { "label": "Instagram",  "url": "https://instagram.com/...",           "visible": true },
-    { "label": "Bandcamp",   "url": "https://....bandcamp.com",            "visible": false }
-  ],
-  "skills": [
-    { "fr": "Production musicale", "en": "Music production" },
-    { "fr": "Composition",         "en": "Composition" },
-    { "fr": "Arrangements",        "en": "Arrangements" },
-    { "fr": "Mix & Mastering",     "en": "Mix & Mastering" },
-    { "fr": "Ableton Live",        "en": "Ableton Live" }
-  ],
-  "experiences": [
+  "artists": [
     {
-      "period": "2022 — présent",
-      "company": "Indépendant",
-      "role": { "fr": "Artiste solo", "en": "Solo artist" },
-      "description": { "fr": "Sortie de X projets, Y streams cumulés.", "en": "Released X projects, Y total streams." }
+      "id": "artist-name",
+      "name": "Artist Name",
+      "title": {
+        "fr": "Musicien · Producteur",
+        "en": "Musician · Producer"
+      },
+      "bio": {
+        "fr": "Biographie de l'artiste à renseigner. Décris ton univers sonore, tes influences, ta démarche.",
+        "en": "Artist biography to fill in. Describe your sonic universe, influences, and creative approach."
+      },
+      "portrait": "/images/portrait.jpg",
+      "email": "contact@artistname.com",
+      "location": {
+        "fr": "Paris, France",
+        "en": "Paris, France"
+      },
+      "socials": [
+        { "label": "Spotify",    "url": "https://open.spotify.com/artist/...", "visible": true },
+        { "label": "SoundCloud", "url": "https://soundcloud.com/...",          "visible": true },
+        { "label": "Instagram",  "url": "https://instagram.com/...",           "visible": true },
+        { "label": "Bandcamp",   "url": "https://....bandcamp.com",            "visible": false }
+      ],
+      "label": null,
+      "credits": [],
+      "musicalStyles": []
     }
   ],
-  "education": [
-    {
-      "year": "2018",
-      "school": "École Nationale de Musique",
-      "diploma": { "fr": "Diplôme de composition", "en": "Composition degree" }
-    }
-  ],
-  "showCv": true,
-  "showSkills": true,
-  "showExperience": true,
-  "showEducation": true,
   "sitePassword": "music2026",
   "sitePasswordEnabled": false
 }

@@ -66,35 +66,33 @@ export interface Release {
   coverCrop?:     CropRect;
 }
 
-export interface Experience {
-  period: string;
-  company: string;
+export interface Label {
+  name: string;
+  logo: string;
+  url: string;
+}
+
+export interface Credit {
   role: LocalizedText;
-  description?: LocalizedText;
+  name: string;
 }
 
-export interface Education {
-  year: string;
-  school: string;
-  diploma: LocalizedText;
-}
-
-export interface PersonalInfo {
+export interface Artist {
+  id: string;
   name: string;
   title: LocalizedText;
   bio: LocalizedText;
   portrait: string;
   email: string;
   location: LocalizedText;
-  cvUrl: string;
   socials: { label: string; url: string; visible?: boolean }[];
-  skills: LocalizedText[];
-  experiences: Experience[];
-  education: Education[];
-  showCv: boolean;
-  showSkills: boolean;
-  showExperience: boolean;
-  showEducation: boolean;
+  label?: Label | null;
+  credits: Credit[];
+  musicalStyles: string[];
+}
+
+export interface PersonalInfo {
+  artists: Artist[];
   sitePassword: string;
   sitePasswordEnabled: boolean;
 }
