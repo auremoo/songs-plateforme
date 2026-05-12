@@ -10,10 +10,37 @@
   "customFontBodyFile": "",
   "gridColumns": 5,
   "categories": [
-    { "value": "electronic", "label": "Electronic" },
-    { "value": "hip-hop",    "label": "Hip-Hop" },
-    { "value": "ambient",    "label": "Ambient" },
-    { "value": "r&b",        "label": "R&B" }
+    {
+      "value": "electronic",
+      "label": "Electronic"
+    },
+    {
+      "value": "hip-hop",
+      "label": "Hip-Hop"
+    },
+    {
+      "value": "ambient",
+      "label": "Ambient"
+    },
+    {
+      "value": "r&b",
+      "label": "R&B"
+    }
   ],
-  "mosaicOrder": ["night-drive", "echoes", "fragments", "aurora", "voids", "debut-ep"]
+  "mosaicOrder": [
+    "chat-dit-quoi-la-zone",
+    "j-ai-mis-le-kaks"
+  ],
+  "mosaicGrid": [
+    [
+      "chat-dit-quoi-la-zone"
+    ],
+    [
+      "j-ai-mis-le-kaks"
+    ],
+    [],
+    [],
+    []
+  ],
+  "mosaicAlignBottom": false
 }
