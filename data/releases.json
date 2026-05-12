@@ -73,7 +73,9 @@
       }
     ],
     "audioPreview": "",
-    "streamingLinks": {},
+    "streamingLinks": {
+      "soundcloud": "https://soundcloud.com/el-rey-carlito/jai-mis-le-kaks"
+    },
     "gallery": [],
     "scatter": {
       "x": 10,
