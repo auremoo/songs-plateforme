@@ -1,5 +1,50 @@
 [
   {
+    "slug": "chat-dit-quoi-la-zone",
+    "title": {
+      "fr": "Chat dit quoi la zone",
+      "en": "Chat dit quoi la zone"
+    },
+    "genre": "hip-hop",
+    "releaseType": "single",
+    "year": "2026",
+    "features": [
+      "Jul"
+    ],
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "cover": "",
+    "color": "#1A1A1A",
+    "tracklist": [
+      {
+        "title": "Chat dit quoi la zone",
+        "duration": "2:52",
+        "features": [
+          "Jul"
+        ]
+      },
+      {
+        "title": "Chat dit quoi la zone (Turbo Club Remix)",
+        "duration": "2:36",
+        "features": [
+          "Jul"
+        ]
+      }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {},
+    "gallery": [],
+    "scatter": {
+      "x": 10,
+      "y": 10,
+      "width": 280,
+      "rotation": 0,
+      "zIndex": 1
+    }
+  },
+  {
     "slug": "echoes",
     "title": {
       "fr": "Echoes",
