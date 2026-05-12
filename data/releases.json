@@ -122,7 +122,9 @@
       }
     ],
     "audioPreview": "",
-    "streamingLinks": {},
+    "streamingLinks": {
+      "soundcloud": "https://on.soundcloud.com/8Inu9ca1c3XUhFJYbW"
+    },
     "gallery": [],
     "scatter": {
       "x": 10,
