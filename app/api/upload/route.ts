@@ -66,20 +66,21 @@ export async function POST(request: Request) {
   let dir: string;
   let publicPrefix: string;
 
+  const cwd = process.cwd();
   if (isFontFile) {
-    dir = path.join(process.cwd(), "public/fonts");
+    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/fonts");
     publicPrefix = "/fonts";
   } else if (isAudio && slug) {
-    dir = path.join(process.cwd(), "public/audio", slug);
+    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/audio", slug);
     publicPrefix = `/audio/${slug}`;
   } else if (isAudio) {
-    dir = path.join(process.cwd(), "public/audio");
+    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/audio");
     publicPrefix = "/audio";
   } else if (slug) {
-    dir = path.join(process.cwd(), "public/images/releases", slug);
+    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/images/releases", slug);
     publicPrefix = `/images/releases/${slug}`;
   } else {
-    dir = path.join(process.cwd(), "public/images");
+    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/images");
     publicPrefix = "/images";
   }
 
@@ -90,7 +91,7 @@ export async function POST(request: Request) {
     ? filename
     : file.name.replace(/\.[^.]+$/, "").replace(/[^a-zA-Z0-9.-]/g, "_");
   const safeName = `${baseName}.${ext}`;
-  const filePath = path.join(dir, safeName);
+  const filePath = path.join(/*turbopackIgnore: true*/ dir, safeName);
 
   await writeFile(filePath, buffer);
 
