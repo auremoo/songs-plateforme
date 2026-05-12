@@ -1,4 +1,4 @@
-# Dependencies
+﻿# Dependencies
 node_modules/
 .pnpm-store/
 
@@ -49,3 +49,8 @@ tmp-clone/
 
 # Claude Code memory (local uniquement)
 .claude/
+
+# Old DA portfolio assets (ne pas versionner)
+public/images/projects/
+public/images/portrait.jpg
+public/images/CV_Margot_Tournier.pdf
