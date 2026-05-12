@@ -56,95 +56,6 @@
     }
   },
   {
-    "slug": "fragments",
-    "title": {
-      "fr": "Fragments",
-      "en": "Fragments"
-    },
-    "genre": "hip-hop",
-    "releaseType": "album",
-    "year": "2023",
-    "features": [
-      "Collab A",
-      "Collab B"
-    ],
-    "description": {
-      "fr": "Premier album, 10 titres. Production lo-fi, samples vinyle et flows introspectifs.",
-      "en": "Debut album, 10 tracks. Lo-fi production, vinyl samples and introspective flows."
-    },
-    "cover": "",
-    "color": "transparent",
-    "tracklist": [
-      {
-        "title": "Intro",
-        "duration": "1:20",
-        "features": []
-      },
-      {
-        "title": "Carte Blanche",
-        "duration": "3:45",
-        "features": []
-      },
-      {
-        "title": "Brume",
-        "duration": "4:02",
-        "features": [
-          "Collab A"
-        ]
-      },
-      {
-        "title": "Tessons",
-        "duration": "3:18",
-        "features": []
-      },
-      {
-        "title": "Gravité",
-        "duration": "3:52",
-        "features": [
-          "Collab B"
-        ]
-      },
-      {
-        "title": "Solitude",
-        "duration": "4:28",
-        "features": []
-      },
-      {
-        "title": "Cassures",
-        "duration": "3:10",
-        "features": []
-      },
-      {
-        "title": "Reprise",
-        "duration": "4:45",
-        "features": []
-      },
-      {
-        "title": "Mémoire",
-        "duration": "5:02",
-        "features": []
-      },
-      {
-        "title": "Outro",
-        "duration": "2:15",
-        "features": []
-      }
-    ],
-    "audioPreview": "",
-    "streamingLinks": {
-      "spotify": "https://open.spotify.com/album/placeholder",
-      "youtube": "https://youtube.com/playlist/placeholder"
-    },
-    "gallery": [],
-    "scatter": {
-      "x": 70,
-      "y": 10,
-      "width": 260,
-      "rotation": 2,
-      "zIndex": 3
-    }
-  },
-  {
     "slug": "aurora",
     "title": {
       "fr": "Aurora",
@@ -231,6 +142,62 @@
       "width": 270,
       "rotation": 3,
       "zIndex": 5
+    }
+  },
+  {
+    "slug": "debut-ep",
+    "title": {
+      "fr": "Debut EP",
+      "en": "Debut EP"
+    },
+    "genre": "hip-hop",
+    "releaseType": "ep",
+    "year": "2021",
+    "features": [],
+    "description": {
+      "fr": "Premier projet, 5 titres autoproduits. Fondations lo-fi et textes bruts.",
+      "en": "First project, 5 self-produced tracks. Lo-fi foundations and raw lyrics."
+    },
+    "cover": "",
+    "color": "transparent",
+    "tracklist": [
+      {
+        "title": "Track 01",
+        "duration": "2:58",
+        "features": []
+      },
+      {
+        "title": "Track 02",
+        "duration": "3:24",
+        "features": []
+      },
+      {
+        "title": "Track 03",
+        "duration": "3:10",
+        "features": []
+      },
+      {
+        "title": "Track 04",
+        "duration": "4:01",
+        "features": []
+      },
+      {
+        "title": "Track 05",
+        "duration": "3:35",
+        "features": []
+      }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {
+      "soundcloud": "https://soundcloud.com/placeholder"
+    },
+    "gallery": [],
+    "scatter": {
+      "x": 80,
+      "y": 45,
+      "width": 250,
+      "rotation": -3,
+      "zIndex": 6
     }
   }
 ]
