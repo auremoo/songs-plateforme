@@ -196,59 +196,46 @@
     }
   },
   {
-    "slug": "debut-ep",
+    "slug": "aurora",
     "title": {
-      "fr": "Debut EP",
-      "en": "Debut EP"
+      "fr": "Aurora",
+      "en": "Aurora"
     },
-    "genre": "hip-hop",
-    "releaseType": "ep",
-    "year": "2021",
+    "genre": "electronic",
+    "releaseType": "single",
+    "year": "2022",
     "features": [],
     "description": {
-      "fr": "Premier projet, 5 titres autoproduits. Fondations lo-fi et textes bruts.",
-      "en": "First project, 5 self-produced tracks. Lo-fi foundations and raw lyrics."
+      "fr": "Single prod. club, kick 808 et arpèges cristallins. Sorti en édition limitée vinyle.",
+      "en": "Club-oriented single, 808 kick and crystalline arpeggios. Released as limited vinyl edition."
     },
     "cover": "",
     "color": "transparent",
     "tracklist": [
       {
-        "title": "Track 01",
-        "duration": "2:58",
+        "title": "Aurora",
+        "duration": "5:48",
         "features": []
       },
       {
-        "title": "Track 02",
-        "duration": "3:24",
-        "features": []
-      },
-      {
-        "title": "Track 03",
-        "duration": "3:10",
-        "features": []
-      },
-      {
-        "title": "Track 04",
-        "duration": "4:01",
-        "features": []
-      },
-      {
-        "title": "Track 05",
-        "duration": "3:35",
+        "title": "Aurora (Dub Mix)",
+        "duration": "7:03",
         "features": []
       }
     ],
     "audioPreview": "",
     "streamingLinks": {
-      "soundcloud": "https://soundcloud.com/placeholder"
+      "spotify": "https://open.spotify.com/track/placeholder",
+      "soundcloud": "https://soundcloud.com/placeholder",
+      "bandcamp": "https://placeholder.bandcamp.com"
     },
     "gallery": [],
     "scatter": {
-      "x": 80,
-      "y": 45,
-      "width": 250,
-      "rotation": -3,
-      "zIndex": 6
+      "x": 20,
+      "y": 50,
+      "width": 290,
+      "rotation": -1,
+      "zIndex": 4
     }
   }
 ]
