@@ -4,7 +4,7 @@ import { AdminAuthGuard } from "@/components/admin/AdminAuthGuard";
 import { AdminNav } from "@/components/admin/AdminNav";
 
 export const metadata = {
-  title: "Admin — Margot Tournier",
+  title: "Admin — Portfolio Musical",
 };
 
 export default function AdminLayout({ children }: { children: ReactNode }) {

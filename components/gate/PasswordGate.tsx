@@ -32,7 +32,7 @@ export function PasswordGate() {
       <body>
         <div className="fixed inset-0 bg-offwhite flex flex-col items-center justify-center px-6">
           <p className="text-gris text-sm mb-10 text-center">
-            Mot de passe requis pour accéder au book de Margot Tournier
+            Mot de passe requis pour accéder au site
           </p>
 
           <form onSubmit={handleSubmit} className="w-full max-w-xs">

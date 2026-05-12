@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for margot-portfolio on 2026-03-10T13:33:13+01:00
+# fly.toml app configuration file for songs-plateforme
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'margot-portfolio'
+app = 'songs-plateforme'
 primary_region = 'cdg'
 
 [build]

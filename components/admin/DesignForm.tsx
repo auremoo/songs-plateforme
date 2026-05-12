@@ -176,7 +176,7 @@ export function DesignForm({ initial }: DesignFormProps) {
               className="mt-3 text-2xl"
               style={{ fontFamily: `"${settings.fontDisplay}", serif` }}
             >
-              Margot Tournier
+              Artist Name
             </p>
           </div>
 
@@ -526,7 +526,7 @@ export function DesignForm({ initial }: DesignFormProps) {
               fontFamily: `"${settings.fontDisplay}", serif`,
             }}
           >
-            Margot Tournier
+            Artist Name
           </p>
           <p
             className="text-sm mb-4"
@@ -535,7 +535,7 @@ export function DesignForm({ initial }: DesignFormProps) {
               fontFamily: `"${settings.fontBody}", sans-serif`,
             }}
           >
-            {"Directrice artistique — Design, typographie, identité visuelle"}
+            {"Musicien · Producteur — Production, mixage, direction artistique"}
           </p>
           <div
             className="h-px"
