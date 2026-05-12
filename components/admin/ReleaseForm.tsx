@@ -209,7 +209,8 @@ export function ReleaseForm({ initial, isNew = false, categories }: ReleaseFormP
         <label className={labelCls}>Featuring (une valeur par ligne)</label>
         <textarea
           value={release.features.join("\n")}
-          onChange={(e) => update("features", e.target.value.split("\n").map((v) => v.trim()).filter(Boolean))}
+          onChange={(e) => update("features", e.target.value.split("\n").filter(Boolean))}
+          onBlur={(e) => update("features", e.target.value.split("\n").map((v) => v.trim()).filter(Boolean))}
           rows={3}
           className={inputCls + " resize-y"}
         />
@@ -296,7 +297,8 @@ export function ReleaseForm({ initial, isNew = false, categories }: ReleaseFormP
               <input
                 type="text"
                 value={track.features.join(", ")}
-                onChange={(e) => updateTrack(index, "features", e.target.value.split(",").map((v) => v.trim()).filter(Boolean))}
+                onChange={(e) => updateTrack(index, "features", e.target.value.split(",").map((v) => v.replace(/^ /, "")).filter(Boolean))}
+                onBlur={(e) => updateTrack(index, "features", e.target.value.split(",").map((v) => v.trim()).filter(Boolean))}
                 placeholder="feat. artiste"
                 className={inputCls}
               />
