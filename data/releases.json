@@ -1,5 +1,49 @@
 [
   {
+    "slug": "j-ai-mis-le-kaks",
+    "title": {
+      "fr": "J'ai mis le Kaks",
+      "en": "J'ai mis le Kaks"
+    },
+    "genre": "hip-hop",
+    "releaseType": "single",
+    "year": "2026",
+    "features": [
+      "Jul"
+    ],
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "cover": "/images/releases/j-ai-mis-le-kaks/kaks_jul.png",
+    "color": "#1A1A1A",
+    "tracklist": [
+      {
+        "title": "J'ai mis le Kaks",
+        "duration": "2:0",
+        "features": [
+          "Jul"
+        ]
+      }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {},
+    "gallery": [],
+    "scatter": {
+      "x": 10,
+      "y": 10,
+      "width": 280,
+      "rotation": 0,
+      "zIndex": 1
+    },
+    "coverCrop": {
+      "x": 0,
+      "y": 0,
+      "width": 100,
+      "height": 100
+    }
+  },
+  {
     "slug": "chat-dit-quoi-la-zone",
     "title": {
       "fr": "Chat dit quoi la zone",
