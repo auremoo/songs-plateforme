@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "night-drive",
+    "title": { "fr": "Night Drive", "en": "Night Drive" },
+    "genre": "electronic",
+    "releaseType": "single",
+    "year": "2024",
+    "features": [],
+    "description": {
+      "fr": "Single électronique sorti en janvier 2024. Ambiance nocturne, synthés analogiques et rythmes 4/4.",
+      "en": "Electronic single released January 2024. Nocturnal atmosphere, analog synths and 4/4 rhythms."
+    },
+    "cover": "",
+    "color": "transparent",
+    "tracklist": [
+      { "title": "Night Drive", "duration": "4:12", "features": [] }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {
+      "spotify": "https://open.spotify.com/track/placeholder",
+      "soundcloud": "https://soundcloud.com/placeholder"
+    },
+    "gallery": [],
+    "scatter": { "x": 10, "y": 5, "width": 280, "rotation": -2, "zIndex": 1 }
+  },
+  {
+    "slug": "echoes",
+    "title": { "fr": "Echoes", "en": "Echoes" },
+    "genre": "ambient",
+    "releaseType": "ep",
+    "year": "2023",
+    "features": ["Guest Artist"],
+    "description": {
+      "fr": "EP ambient de 4 titres. Textures généreuses, field recordings et atmosphères planantes.",
+      "en": "4-track ambient EP. Rich textures, field recordings and hovering atmospheres."
+    },
+    "cover": "",
+    "color": "transparent",
+    "tracklist": [
+      { "title": "Morning Fog",  "duration": "5:32", "features": [] },
+      { "title": "Drifting",     "duration": "6:10", "features": ["Guest Artist"] },
+      { "title": "Still Water",  "duration": "4:48", "features": [] },
+      { "title": "Last Light",   "duration": "7:02", "features": [] }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {
+      "spotify": "https://open.spotify.com/album/placeholder",
+      "appleMusic": "https://music.apple.com/album/placeholder"
+    },
+    "gallery": [],
+    "scatter": { "x": 45, "y": 20, "width": 300, "rotation": 1, "zIndex": 2 }
+  },
+  {
+    "slug": "fragments",
+    "title": { "fr": "Fragments", "en": "Fragments" },
+    "genre": "hip-hop",
+    "releaseType": "album",
+    "year": "2023",
+    "features": ["Collab A", "Collab B"],
+    "description": {
+      "fr": "Premier album, 10 titres. Production lo-fi, samples vinyle et flows introspectifs.",
+      "en": "Debut album, 10 tracks. Lo-fi production, vinyl samples and introspective flows."
+    },
+    "cover": "",
+    "color": "transparent",
+    "tracklist": [
+      { "title": "Intro",         "duration": "1:20", "features": [] },
+      { "title": "Carte Blanche", "duration": "3:45", "features": [] },
+      { "title": "Brume",         "duration": "4:02", "features": ["Collab A"] },
+      { "title": "Tessons",       "duration": "3:18", "features": [] },
+      { "title": "Gravité",       "duration": "3:52", "features": ["Collab B"] },
+      { "title": "Solitude",      "duration": "4:28", "features": [] },
+      { "title": "Cassures",      "duration": "3:10", "features": [] },
+      { "title": "Reprise",       "duration": "4:45", "features": [] },
+      { "title": "Mémoire",       "duration": "5:02", "features": [] },
+      { "title": "Outro",         "duration": "2:15", "features": [] }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {
+      "spotify": "https://open.spotify.com/album/placeholder",
+      "youtube": "https://youtube.com/playlist/placeholder"
+    },
+    "gallery": [],
+    "scatter": { "x": 70, "y": 10, "width": 260, "rotation": 2, "zIndex": 3 }
+  },
+  {
+    "slug": "aurora",
+    "title": { "fr": "Aurora", "en": "Aurora" },
+    "genre": "electronic",
+    "releaseType": "single",
+    "year": "2022",
+    "features": [],
+    "description": {
+      "fr": "Single prod. club, kick 808 et arpèges cristallins. Sorti en édition limitée vinyle.",
+      "en": "Club-oriented single, 808 kick and crystalline arpeggios. Released as limited vinyl edition."
+    },
+    "cover": "",
+    "color": "transparent",
+    "tracklist": [
+      { "title": "Aurora",           "duration": "5:48", "features": [] },
+      { "title": "Aurora (Dub Mix)", "duration": "7:03", "features": [] }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {
+      "spotify":    "https://open.spotify.com/track/placeholder",
+      "soundcloud": "https://soundcloud.com/placeholder",
+      "bandcamp":   "https://placeholder.bandcamp.com"
+    },
+    "gallery": [],
+    "scatter": { "x": 20, "y": 50, "width": 290, "rotation": -1, "zIndex": 4 }
+  },
+  {
+    "slug": "voids",
+    "title": { "fr": "Voids", "en": "Voids" },
+    "genre": "ambient",
+    "releaseType": "ep",
+    "year": "2022",
+    "features": [],
+    "description": {
+      "fr": "EP de trois titres expérimentaux. Drone, silence et résonances.",
+      "en": "Three-track experimental EP. Drone, silence and resonances."
+    },
+    "cover": "",
+    "color": "transparent",
+    "tracklist": [
+      { "title": "Void I",   "duration": "8:10", "features": [] },
+      { "title": "Void II",  "duration": "9:35", "features": [] },
+      { "title": "Void III", "duration": "6:50", "features": [] }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {
+      "bandcamp": "https://placeholder.bandcamp.com"
+    },
+    "gallery": [],
+    "scatter": { "x": 55, "y": 60, "width": 270, "rotation": 3, "zIndex": 5 }
+  },
+  {
+    "slug": "debut-ep",
+    "title": { "fr": "Debut EP", "en": "Debut EP" },
+    "genre": "hip-hop",
+    "releaseType": "ep",
+    "year": "2021",
+    "features": [],
+    "description": {
+      "fr": "Premier projet, 5 titres autoproduits. Fondations lo-fi et textes bruts.",
+      "en": "First project, 5 self-produced tracks. Lo-fi foundations and raw lyrics."
+    },
+    "cover": "",
+    "color": "transparent",
+    "tracklist": [
+      { "title": "Track 01", "duration": "2:58", "features": [] },
+      { "title": "Track 02", "duration": "3:24", "features": [] },
+      { "title": "Track 03", "duration": "3:10", "features": [] },
+      { "title": "Track 04", "duration": "4:01", "features": [] },
+      { "title": "Track 05", "duration": "3:35", "features": [] }
+    ],
+    "audioPreview": "",
+    "streamingLinks": {
+      "soundcloud": "https://soundcloud.com/placeholder"
+    },
+    "gallery": [],
+    "scatter": { "x": 80, "y": 45, "width": 250, "rotation": -3, "zIndex": 6 }
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "music":   "Music",
+    "about":   "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "year":      "Year",
+    "release":   "Release",
+    "type":      "Type",
+    "genre":     "Genre",
+    "filterAll": "All",
+    "archives":  "Releases",
+    "preview":   "Preview"
+  },
+  "release": {
+    "year":         "Year",
+    "featuring":    "Featuring",
+    "type":         "Type",
+    "genre":        "Genre",
+    "tracklist":    "Tracklist",
+    "listenOn":     "Listen on",
+    "audioPreview": "Preview",
+    "noAudio":      "",
+    "prevRelease":  "Previous release",
+    "nextRelease":  "Next release",
+    "allReleases":  "All releases"
+  },
+  "about": {
+    "manifesto":  "Manifesto",
+    "bio":        "Bio",
+    "pressKit":   "Press Kit",
+    "skills":     "Skills",
+    "experience": "Career",
+    "education":  "Education",
+    "contact":    "Contact",
+    "socials":    "Social",
+    "location":   "Location",
+    "available":  "Available for new projects"
+  },
+  "footer": {
+    "copyright": "© {year} Artist Name"
+  },
+  "loader": {
+    "subtitle": "Musician · Producer"
+  },
+  "meta": {
+    "homeTitle":          "Artist Name — Musician · Producer",
+    "homeDescription":    "Musical portfolio of Artist Name, musician and producer.",
+    "aboutTitle":         "About — Artist Name",
+    "aboutDescription":   "Background, skills and creative approach of Artist Name, musician and producer.",
+    "releaseDescription": "Musical release by Artist Name."
+  }
+}

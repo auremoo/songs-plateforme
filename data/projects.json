@@ -1,0 +1,452 @@
+[
+  {
+    "slug": "ysl-ourika-community-gardens",
+    "title": {
+      "fr": "YSL Ourika Community Gardens",
+      "en": "YSL Ourika Community Gardens"
+    },
+    "category": "edition",
+    "year": "2024",
+    "client": "YSL",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 10,
+      "y": 10,
+      "width": 280,
+      "rotation": -2,
+      "zIndex": 1
+    },
+    "thumbnailRatio": "portrait"
+  },
+  {
+    "slug": "wish-card-ysl-2024",
+    "title": {
+      "fr": "Wish Card YSL 2024",
+      "en": "Wish Card YSL 2024"
+    },
+    "category": "edition",
+    "year": "2024",
+    "client": "YSL",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 300,
+      "y": 15,
+      "width": 240,
+      "rotation": 1,
+      "zIndex": 2
+    },
+    "thumbnailRatio": "portrait"
+  },
+  {
+    "slug": "wish-card-ysl-2025",
+    "title": {
+      "fr": "Wish Card YSL 2025",
+      "en": "Wish Card YSL 2025"
+    },
+    "category": "edition",
+    "year": "2025",
+    "client": "YSL",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 560,
+      "y": 20,
+      "width": 240,
+      "rotation": -1,
+      "zIndex": 3
+    },
+    "thumbnailRatio": "portrait"
+  },
+  {
+    "slug": "wish-card-musee-marine",
+    "title": {
+      "fr": "Wish Card Musée National de la Marine",
+      "en": "Wish Card National Maritime Museum"
+    },
+    "category": "edition",
+    "year": "2025",
+    "client": "Musée National de la Marine",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 810,
+      "y": 10,
+      "width": 250,
+      "rotation": 2,
+      "zIndex": 4
+    },
+    "thumbnailRatio": "portrait"
+  },
+  {
+    "slug": "wishes-cards-domaine-de-la",
+    "title": {
+      "fr": "Wishes Cards Domaine de l'A",
+      "en": "Wishes Cards Domaine de l'A"
+    },
+    "category": "edition",
+    "year": "2025",
+    "client": "Domaine de l'A & Derenoncourt",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 50,
+      "y": 280,
+      "width": 260,
+      "rotation": -1,
+      "zIndex": 5
+    },
+    "thumbnailRatio": "landscape"
+  },
+  {
+    "slug": "subway-sub-raclette",
+    "title": {
+      "fr": "Subway — Sub Raclette",
+      "en": "Subway — Sub Raclette"
+    },
+    "category": "pub",
+    "year": "2023",
+    "client": "Subway",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 330,
+      "y": 290,
+      "width": 300,
+      "rotation": 1,
+      "zIndex": 6
+    },
+    "thumbnailRatio": "wide"
+  },
+  {
+    "slug": "subway-el-trio-mexicano",
+    "title": {
+      "fr": "Subway — El Trio Mexicano",
+      "en": "Subway — El Trio Mexicano"
+    },
+    "category": "pub",
+    "year": "2023",
+    "client": "Subway",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 650,
+      "y": 275,
+      "width": 300,
+      "rotation": -2,
+      "zIndex": 7
+    },
+    "thumbnailRatio": "wide"
+  },
+  {
+    "slug": "miss-dior",
+    "title": {
+      "fr": "Miss Dior",
+      "en": "Miss Dior"
+    },
+    "category": "edition",
+    "year": "2024",
+    "client": "Dior",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 20,
+      "y": 540,
+      "width": 270,
+      "rotation": 2,
+      "zIndex": 8
+    },
+    "thumbnailRatio": "portrait"
+  },
+  {
+    "slug": "tosone",
+    "title": {
+      "fr": "Tosone",
+      "en": "Tosone"
+    },
+    "category": "pub",
+    "year": "2024",
+    "client": "Tosone",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 310,
+      "y": 550,
+      "width": 280,
+      "rotation": -1,
+      "zIndex": 9
+    },
+    "thumbnailRatio": "landscape"
+  },
+  {
+    "slug": "boss-absolu-fragrance-event",
+    "title": {
+      "fr": "Boss Absolu Fragrance Event",
+      "en": "Boss Absolu Fragrance Event"
+    },
+    "category": "packaging",
+    "year": "2024",
+    "client": "Hugo Boss",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 620,
+      "y": 540,
+      "width": 270,
+      "rotation": 1,
+      "zIndex": 10
+    },
+    "thumbnailRatio": "landscape"
+  },
+  {
+    "slug": "ck-one-essence-fragrance-event",
+    "title": {
+      "fr": "CK One Essence Fragrance Event",
+      "en": "CK One Essence Fragrance Event"
+    },
+    "category": "packaging",
+    "year": "2024",
+    "client": "Calvin Klein",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 30,
+      "y": 800,
+      "width": 260,
+      "rotation": -2,
+      "zIndex": 11
+    },
+    "thumbnailRatio": "landscape"
+  },
+  {
+    "slug": "goldfields-banks-tales-of-amber",
+    "title": {
+      "fr": "Goldfields & Banks — Tales of Amber",
+      "en": "Goldfields & Banks — Tales of Amber"
+    },
+    "category": "packaging",
+    "year": "2024",
+    "client": "Goldfields & Banks Australia",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 310,
+      "y": 810,
+      "width": 280,
+      "rotation": 2,
+      "zIndex": 12
+    },
+    "thumbnailRatio": "landscape"
+  },
+  {
+    "slug": "gucci-flora-beauty-box",
+    "title": {
+      "fr": "Gucci Flora Beauty Box",
+      "en": "Gucci Flora Beauty Box"
+    },
+    "category": "packaging",
+    "year": "2024",
+    "client": "Gucci",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 620,
+      "y": 800,
+      "width": 250,
+      "rotation": -1,
+      "zIndex": 13
+    },
+    "thumbnailRatio": "square"
+  },
+  {
+    "slug": "infiniment-coty",
+    "title": {
+      "fr": "Infiniment Coty",
+      "en": "Infiniment Coty"
+    },
+    "category": "packaging",
+    "year": "2024",
+    "client": "Coty",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 50,
+      "y": 1060,
+      "width": 250,
+      "rotation": 1,
+      "zIndex": 14
+    },
+    "thumbnailRatio": "square"
+  },
+  {
+    "slug": "duval-leroy-champagne-box",
+    "title": {
+      "fr": "Duval Leroy — Champagne Box",
+      "en": "Duval Leroy — Champagne Box"
+    },
+    "category": "packaging",
+    "year": "2024",
+    "client": "Duval Leroy",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 320,
+      "y": 1070,
+      "width": 260,
+      "rotation": -2,
+      "zIndex": 15
+    },
+    "thumbnailRatio": "landscape"
+  },
+  {
+    "slug": "metaxa-12-stars",
+    "title": {
+      "fr": "Metaxa 12 Stars",
+      "en": "Metaxa 12 Stars"
+    },
+    "category": "packaging",
+    "year": "2024",
+    "client": "Metaxa / Cointreau",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 600,
+      "y": 1060,
+      "width": 250,
+      "rotation": 1,
+      "zIndex": 16
+    },
+    "thumbnailRatio": "square"
+  },
+  {
+    "slug": "ppt-animations",
+    "title": {
+      "fr": "PPT Animations",
+      "en": "PPT Animations"
+    },
+    "category": "identite",
+    "year": "2024",
+    "client": "Kenzo, Givenchy, Mercedes",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 40,
+      "y": 1320,
+      "width": 270,
+      "rotation": -1,
+      "zIndex": 17
+    },
+    "thumbnailRatio": "wide"
+  },
+  {
+    "slug": "logofolio",
+    "title": {
+      "fr": "Logofolio",
+      "en": "Logofolio"
+    },
+    "category": "identite",
+    "year": "2025",
+    "client": "Subway, Janela, Senseum, Rappsody, Parce Que Vous Êtes, Transat, etic, Cercle Neptune, L'Oréal Operations",
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "thumbnail": "",
+    "color": "transparent",
+    "gallery": [],
+    "scatter": {
+      "x": 330,
+      "y": 1330,
+      "width": 270,
+      "rotation": 2,
+      "zIndex": 18
+    },
+    "thumbnailRatio": "square"
+  }
+]

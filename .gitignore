@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Inspirations (fichiers lourds, garder en local uniquement)
+inspirations/*.png
+inspirations/*.mov
+
+# Temporary
+/tmp/
+
+# Clone original DA (non pertinent pour ce repo)
+tmp-clone/
+
+# Claude Code memory (local uniquement)
+.claude/

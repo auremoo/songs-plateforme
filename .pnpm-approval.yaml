@@ -1,0 +1,4 @@
+@parcel/watcher=true
+@swc/core=true
+sharp=true
+unrs-resolver=true

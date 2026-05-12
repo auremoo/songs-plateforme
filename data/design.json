@@ -1,0 +1,19 @@
+{
+  "fontDisplay": "Playfair Display",
+  "fontBody": "Inter",
+  "colorOffwhite": "#F8F7F4",
+  "colorNoir": "#1A1A1A",
+  "colorGris": "#6B6B6B",
+  "colorGrisClair": "#E0DEDA",
+  "adobeFontsUrl": "",
+  "customFontDisplayFile": "",
+  "customFontBodyFile": "",
+  "gridColumns": 5,
+  "categories": [
+    { "value": "electronic", "label": "Electronic" },
+    { "value": "hip-hop",    "label": "Hip-Hop" },
+    { "value": "ambient",    "label": "Ambient" },
+    { "value": "r&b",        "label": "R&B" }
+  ],
+  "mosaicOrder": ["night-drive", "echoes", "fragments", "aurora", "voids", "debut-ep"]
+}

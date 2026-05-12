@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "music":   "Musique",
+    "about":   "À propos",
+    "contact": "Contact"
+  },
+  "home": {
+    "year":      "Année",
+    "release":   "Sortie",
+    "type":      "Type",
+    "genre":     "Genre",
+    "filterAll": "Tout",
+    "archives":  "Sorties",
+    "preview":   "Aperçu"
+  },
+  "release": {
+    "year":         "Année",
+    "featuring":    "Avec",
+    "type":         "Type",
+    "genre":        "Genre",
+    "tracklist":    "Tracklist",
+    "listenOn":     "Écouter sur",
+    "audioPreview": "Extrait",
+    "noAudio":      "",
+    "prevRelease":  "Sortie précédente",
+    "nextRelease":  "Sortie suivante",
+    "allReleases":  "Toutes les sorties"
+  },
+  "about": {
+    "manifesto":  "Manifeste",
+    "bio":        "Bio",
+    "pressKit":   "Press Kit",
+    "skills":     "Compétences",
+    "experience": "Parcours",
+    "education":  "Formation",
+    "contact":    "Contact",
+    "socials":    "Réseaux",
+    "location":   "Localisation",
+    "available":  "Disponible pour de nouveaux projets"
+  },
+  "footer": {
+    "copyright": "© {year} Artist Name"
+  },
+  "loader": {
+    "subtitle": "Musicien · Producteur"
+  },
+  "meta": {
+    "homeTitle":          "Artist Name — Musicien · Producteur",
+    "homeDescription":    "Portfolio musical de Artist Name, musicien et producteur.",
+    "aboutTitle":         "À propos — Artist Name",
+    "aboutDescription":   "Parcours, compétences et démarche de Artist Name, musicien et producteur.",
+    "releaseDescription": "Sortie musicale de Artist Name."
+  }
+}
