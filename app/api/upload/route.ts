@@ -26,6 +26,45 @@ const MAX_VIDEO_SIZE = 100 * 1024 * 1024;
 const MAX_AUDIO_SIZE = 20 * 1024 * 1024;
 const MAX_OTHER_SIZE = 10 * 1024 * 1024;
 
+// ── GitHub API file commit (Vercel: filesystem is read-only) ──
+async function commitFileToGitHub(repoPath: string, buffer: Buffer): Promise<void> {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) throw new Error("GITHUB_TOKEN not set");
+
+  const owner = process.env.GITHUB_OWNER ?? "auremoo";
+  const repo  = process.env.GITHUB_REPO  ?? "songs-plateforme";
+  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${repoPath}`;
+  const headers: Record<string, string> = {
+    Authorization: `Bearer ${token}`,
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "Content-Type": "application/json",
+  };
+
+  // Get SHA if file already exists (needed for update)
+  let sha: string | undefined;
+  const getRes = await fetch(apiUrl, { headers });
+  if (getRes.ok) {
+    const data = await getRes.json() as { sha: string };
+    sha = data.sha;
+  }
+
+  const putRes = await fetch(apiUrl, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({
+      message: `admin: upload ${repoPath.split("/").pop()}`,
+      content: buffer.toString("base64"),
+      ...(sha ? { sha } : {}),
+    }),
+  });
+
+  if (!putRes.ok) {
+    const err = await putRes.text();
+    throw new Error(`GitHub commit failed (${putRes.status}): ${err}`);
+  }
+}
+
 export async function POST(request: Request) {
   if (!(await isAuthenticated())) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -63,39 +102,37 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: `File too large. Maximum ${maxMb}MB` }, { status: 400 });
   }
 
-  let dir: string;
   let publicPrefix: string;
 
-  const cwd = process.cwd();
   if (isFontFile) {
-    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/fonts");
     publicPrefix = "/fonts";
   } else if (isAudio && slug) {
-    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/audio", slug);
     publicPrefix = `/audio/${slug}`;
   } else if (isAudio) {
-    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/audio");
     publicPrefix = "/audio";
   } else if (slug) {
-    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/images/releases", slug);
     publicPrefix = `/images/releases/${slug}`;
   } else {
-    dir = path.join(/*turbopackIgnore: true*/ cwd, "public/images");
     publicPrefix = "/images";
   }
-
-  await mkdir(dir, { recursive: true });
 
   const buffer = Buffer.from(await file.arrayBuffer());
   const baseName = filename
     ? filename
     : file.name.replace(/\.[^.]+$/, "").replace(/[^a-zA-Z0-9.-]/g, "_");
   const safeName = `${baseName}.${ext}`;
-  const filePath = path.join(/*turbopackIgnore: true*/ dir, safeName);
-
-  await writeFile(filePath, buffer);
-
   const publicPath = `${publicPrefix}/${safeName}`;
+
+  if (process.env.VERCEL === "1") {
+    // Commit directly to GitHub — Vercel redeploys and serves the file as a static asset
+    await commitFileToGitHub(`public${publicPath}`, buffer);
+  } else {
+    const cwd = process.cwd();
+    const dir = path.join(/*turbopackIgnore: true*/ cwd, "public", publicPrefix);
+    await mkdir(dir, { recursive: true });
+    const filePath = path.join(/*turbopackIgnore: true*/ dir, safeName);
+    await writeFile(filePath, buffer);
+  }
 
   return NextResponse.json(
     { path: publicPath, type: isVideo ? "video" : isAudio ? "audio" : "image" },
