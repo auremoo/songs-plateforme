@@ -25,22 +25,18 @@
     {
       "value": "r&b",
       "label": "R&B"
+    },
+    {
+      "value": "pop",
+      "label": "Pop"
     }
   ],
   "mosaicOrder": [
-    "chat-dit-quoi-la-zone",
-    "j-ai-mis-le-kaks"
-  ],
-  "mosaicGrid": [
-    [
-      "chat-dit-quoi-la-zone"
-    ],
-    [
-      "j-ai-mis-le-kaks"
-    ],
-    [],
-    [],
-    []
-  ],
-  "mosaicAlignBottom": true
+    "night-drive",
+    "echoes",
+    "fragments",
+    "aurora",
+    "voids",
+    "debut-ep"
+  ]
 }
