@@ -5,7 +5,7 @@
       "fr": "Neon Instinct",
       "en": "Neon Instinct"
     },
-    "genre": "electronic",
+    "genre": "hip-hop",
     "releaseType": "single",
     "year": "2026",
     "features": [
@@ -15,7 +15,7 @@
       "fr": "",
       "en": ""
     },
-    "cover": "",
+    "cover": "/images/releases/neon-instinct/travis.png",
     "color": "#1A1A1A",
     "tracklist": [
       {
@@ -35,6 +35,12 @@
       "width": 280,
       "rotation": 0,
       "zIndex": 1
+    },
+    "coverCrop": {
+      "x": 0,
+      "y": 0,
+      "width": 100,
+      "height": 100
     }
   },
   {
