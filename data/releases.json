@@ -51,62 +51,6 @@
     }
   },
   {
-    "slug": "echoes",
-    "title": {
-      "fr": "Echoes",
-      "en": "Echoes"
-    },
-    "genre": "ambient",
-    "releaseType": "ep",
-    "year": "2023",
-    "features": [
-      "Guest Artist"
-    ],
-    "description": {
-      "fr": "EP ambient de 4 titres. Textures généreuses, field recordings et atmosphères planantes.",
-      "en": "4-track ambient EP. Rich textures, field recordings and hovering atmospheres."
-    },
-    "cover": "",
-    "color": "transparent",
-    "tracklist": [
-      {
-        "title": "Morning Fog",
-        "duration": "5:32",
-        "features": []
-      },
-      {
-        "title": "Drifting",
-        "duration": "6:10",
-        "features": [
-          "Guest Artist"
-        ]
-      },
-      {
-        "title": "Still Water",
-        "duration": "4:48",
-        "features": []
-      },
-      {
-        "title": "Last Light",
-        "duration": "7:02",
-        "features": []
-      }
-    ],
-    "audioPreview": "",
-    "streamingLinks": {
-      "spotify": "https://open.spotify.com/album/placeholder",
-      "appleMusic": "https://music.apple.com/album/placeholder"
-    },
-    "gallery": [],
-    "scatter": {
-      "x": 45,
-      "y": 20,
-      "width": 300,
-      "rotation": 1,
-      "zIndex": 2
-    }
-  },
-  {
     "slug": "fragments",
     "title": {
       "fr": "Fragments",
