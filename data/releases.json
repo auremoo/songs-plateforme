@@ -56,46 +56,92 @@
     }
   },
   {
-    "slug": "aurora",
+    "slug": "fragments",
     "title": {
-      "fr": "Aurora",
-      "en": "Aurora"
+      "fr": "Fragments",
+      "en": "Fragments"
     },
-    "genre": "electronic",
-    "releaseType": "single",
-    "year": "2022",
-    "features": [],
+    "genre": "hip-hop",
+    "releaseType": "album",
+    "year": "2023",
+    "features": [
+      "Collab A",
+      "Collab B"
+    ],
     "description": {
-      "fr": "Single prod. club, kick 808 et arpèges cristallins. Sorti en édition limitée vinyle.",
-      "en": "Club-oriented single, 808 kick and crystalline arpeggios. Released as limited vinyl edition."
+      "fr": "Premier album, 10 titres. Production lo-fi, samples vinyle et flows introspectifs.",
+      "en": "Debut album, 10 tracks. Lo-fi production, vinyl samples and introspective flows."
     },
     "cover": "",
     "color": "transparent",
     "tracklist": [
       {
-        "title": "Aurora",
-        "duration": "5:48",
+        "title": "Intro",
+        "duration": "1:20",
         "features": []
       },
       {
-        "title": "Aurora (Dub Mix)",
-        "duration": "7:03",
+        "title": "Carte Blanche",
+        "duration": "3:45",
+        "features": []
+      },
+      {
+        "title": "Brume",
+        "duration": "4:02",
+        "features": [
+          "Collab A"
+        ]
+      },
+      {
+        "title": "Tessons",
+        "duration": "3:18",
+        "features": []
+      },
+      {
+        "title": "Gravité",
+        "duration": "3:52",
+        "features": [
+          "Collab B"
+        ]
+      },
+      {
+        "title": "Solitude",
+        "duration": "4:28",
+        "features": []
+      },
+      {
+        "title": "Cassures",
+        "duration": "3:10",
+        "features": []
+      },
+      {
+        "title": "Reprise",
+        "duration": "4:45",
+        "features": []
+      },
+      {
+        "title": "Mémoire",
+        "duration": "5:02",
+        "features": []
+      },
+      {
+        "title": "Outro",
+        "duration": "2:15",
         "features": []
       }
     ],
     "audioPreview": "",
     "streamingLinks": {
-      "spotify": "https://open.spotify.com/track/placeholder",
-      "soundcloud": "https://soundcloud.com/placeholder",
-      "bandcamp": "https://placeholder.bandcamp.com"
+      "spotify": "https://open.spotify.com/album/placeholder",
+      "youtube": "https://youtube.com/playlist/placeholder"
     },
     "gallery": [],
     "scatter": {
-      "x": 20,
-      "y": 50,
-      "width": 290,
-      "rotation": -1,
-      "zIndex": 4
+      "x": 70,
+      "y": 10,
+      "width": 260,
+      "rotation": 2,
+      "zIndex": 3
     }
   },
   {
