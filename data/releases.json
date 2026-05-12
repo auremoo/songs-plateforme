@@ -51,92 +51,59 @@
     }
   },
   {
-    "slug": "fragments",
+    "slug": "echoes",
     "title": {
-      "fr": "Fragments",
-      "en": "Fragments"
+      "fr": "Echoes",
+      "en": "Echoes"
     },
-    "genre": "hip-hop",
-    "releaseType": "album",
+    "genre": "ambient",
+    "releaseType": "ep",
     "year": "2023",
     "features": [
-      "Collab A",
-      "Collab B"
+      "Guest Artist"
     ],
     "description": {
-      "fr": "Premier album, 10 titres. Production lo-fi, samples vinyle et flows introspectifs.",
-      "en": "Debut album, 10 tracks. Lo-fi production, vinyl samples and introspective flows."
+      "fr": "EP ambient de 4 titres. Textures généreuses, field recordings et atmosphères planantes.",
+      "en": "4-track ambient EP. Rich textures, field recordings and hovering atmospheres."
     },
     "cover": "",
     "color": "transparent",
     "tracklist": [
       {
-        "title": "Intro",
-        "duration": "1:20",
+        "title": "Morning Fog",
+        "duration": "5:32",
         "features": []
       },
       {
-        "title": "Carte Blanche",
-        "duration": "3:45",
-        "features": []
-      },
-      {
-        "title": "Brume",
-        "duration": "4:02",
+        "title": "Drifting",
+        "duration": "6:10",
         "features": [
-          "Collab A"
+          "Guest Artist"
         ]
       },
       {
-        "title": "Tessons",
-        "duration": "3:18",
+        "title": "Still Water",
+        "duration": "4:48",
         "features": []
       },
       {
-        "title": "Gravité",
-        "duration": "3:52",
-        "features": [
-          "Collab B"
-        ]
-      },
-      {
-        "title": "Solitude",
-        "duration": "4:28",
-        "features": []
-      },
-      {
-        "title": "Cassures",
-        "duration": "3:10",
-        "features": []
-      },
-      {
-        "title": "Reprise",
-        "duration": "4:45",
-        "features": []
-      },
-      {
-        "title": "Mémoire",
-        "duration": "5:02",
-        "features": []
-      },
-      {
-        "title": "Outro",
-        "duration": "2:15",
+        "title": "Last Light",
+        "duration": "7:02",
         "features": []
       }
     ],
     "audioPreview": "",
     "streamingLinks": {
       "spotify": "https://open.spotify.com/album/placeholder",
-      "youtube": "https://youtube.com/playlist/placeholder"
+      "appleMusic": "https://music.apple.com/album/placeholder"
     },
     "gallery": [],
     "scatter": {
-      "x": 70,
-      "y": 10,
-      "width": 260,
-      "rotation": 2,
-      "zIndex": 3
+      "x": 45,
+      "y": 20,
+      "width": 300,
+      "rotation": 1,
+      "zIndex": 2
     }
   },
   {
