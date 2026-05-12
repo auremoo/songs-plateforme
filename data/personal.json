@@ -1,31 +1,55 @@
 {
   "artists": [
     {
-      "id": "artist-name",
-      "name": "Artist Name",
+      "id": "charlie",
+      "name": "Charlie",
       "title": {
         "fr": "Musicien · Producteur",
         "en": "Musician · Producer"
       },
       "bio": {
-        "fr": "Biographie de l'artiste à renseigner. Décris ton univers sonore, tes influences, ta démarche.",
-        "en": "Artist biography to fill in. Describe your sonic universe, influences, and creative approach."
+        "fr": "Un chat français qui chante",
+        "en": "A french cat who sings"
       },
-      "portrait": "/images/portrait.jpg",
-      "email": "contact@artistname.com",
+      "portrait": "/images/IMG_0622.jpeg",
+      "email": "el-rey-carlito@gmail.com",
       "location": {
-        "fr": "Paris, France",
-        "en": "Paris, France"
+        "fr": "Lyon, France",
+        "en": "Lyon, France"
       },
       "socials": [
-        { "label": "Spotify",    "url": "https://open.spotify.com/artist/...", "visible": true },
-        { "label": "SoundCloud", "url": "https://soundcloud.com/...",          "visible": true },
-        { "label": "Instagram",  "url": "https://instagram.com/...",           "visible": true },
-        { "label": "Bandcamp",   "url": "https://....bandcamp.com",            "visible": false }
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/artist/...",
+          "visible": false
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/",
+          "visible": true
+        },
+        {
+          "label": "Instagram",
+          "url": "https://instagram.com/",
+          "visible": true
+        },
+        {
+          "label": "Bandcamp",
+          "url": "https://....bandcamp.com",
+          "visible": false
+        }
       ],
-      "label": null,
+      "label": {
+        "name": "Moo-d",
+        "logo": "/images/mood.png",
+        "url": ""
+      },
       "credits": [],
-      "musicalStyles": []
+      "musicalStyles": [
+        "Rap",
+        "Hip-Hop",
+        "Urban Pop"
+      ]
     }
   ],
   "sitePassword": "music2026",
