@@ -27,7 +27,9 @@
       }
     ],
     "audioPreview": "",
-    "streamingLinks": {},
+    "streamingLinks": {
+      "soundcloud": "https://soundcloud.com/el-rey-carlito/neon-instinct"
+    },
     "gallery": [],
     "scatter": {
       "x": 10,
