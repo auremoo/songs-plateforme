@@ -62,6 +62,8 @@ export function ReleaseForm({ initial, isNew = false, categories }: ReleaseFormP
   const [release, setRelease] = useState<Release>(initial ?? defaultRelease);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  // Blob URLs for immediate preview after upload (avoids waiting for server/redeploy)
+  const [blobUrls, setBlobUrls] = useState<Record<string, string>>({});
 
   function update(field: string, value: unknown) {
     setRelease((prev) => ({ ...prev, [field]: value }));
@@ -230,11 +232,14 @@ export function ReleaseForm({ initial, isNew = false, categories }: ReleaseFormP
         <div>
           <label className={labelCls}>Cover art</label>
           <input type="text" value={release.cover} onChange={(e) => update("cover", e.target.value)} className={inputCls + " mb-2"} placeholder="/images/releases/slug/cover.jpg" />
-          <ImageUploader slug={release.slug} onUploaded={(path) => update("cover", path)} accept="image/*" />
+          <ImageUploader slug={release.slug} onUploaded={(path, _, blob) => {
+            update("cover", path);
+            if (blob) setBlobUrls((prev) => ({ ...prev, cover: blob }));
+          }} accept="image/*" />
           {release.cover && (
             <div className="mt-2">
               <label className={labelCls}>Cadrage cover</label>
-              <CropPicker src={release.cover} value={release.coverCrop} onChange={(crop: CropRect) => update("coverCrop", crop)} ratio="square" />
+              <CropPicker src={blobUrls.cover || release.cover} value={release.coverCrop} onChange={(crop: CropRect) => update("coverCrop", crop)} ratio="square" />
             </div>
           )}
         </div>
@@ -330,7 +335,11 @@ export function ReleaseForm({ initial, isNew = false, categories }: ReleaseFormP
                 <input type="text" value={item.alt.fr} onChange={(e) => updateGalleryItem(index, "alt", { ...item.alt, fr: e.target.value })} placeholder="Alt text (FR)" className={inputCls} />
                 <input type="text" value={item.alt.en} onChange={(e) => updateGalleryItem(index, "alt", { ...item.alt, en: e.target.value })} placeholder="Alt text (EN)" className={inputCls} />
               </div>
-              <ImageUploader slug={release.slug} onUploaded={(path, type) => { updateGalleryItem(index, "src", path); if (type) updateGalleryItem(index, "type", type); }} />
+              <ImageUploader slug={release.slug} onUploaded={(path, type, blob) => {
+                updateGalleryItem(index, "src", path);
+                if (type) updateGalleryItem(index, "type", type);
+                if (blob) setBlobUrls((prev) => ({ ...prev, [`gallery_${index}`]: blob }));
+              }} />
               <div className="pt-1 border-t border-gray-100 space-y-3">
                 <div className="flex items-center gap-3">
                   <label className="flex items-center gap-2 cursor-pointer">
@@ -346,7 +355,7 @@ export function ReleaseForm({ initial, isNew = false, categories }: ReleaseFormP
                   )}
                 </div>
                 {item.showOnMosaic && item.src && item.type !== "video" && (
-                  <CropPicker src={item.src} value={item.mosaicCrop} onChange={(crop: CropRect) => updateGalleryItem(index, "mosaicCrop", crop)} ratio={item.mosaicRatio ?? "square"} />
+                  <CropPicker src={blobUrls[`gallery_${index}`] || item.src} value={item.mosaicCrop} onChange={(crop: CropRect) => updateGalleryItem(index, "mosaicCrop", crop)} ratio={item.mosaicRatio ?? "square"} />
                 )}
               </div>
             </div>

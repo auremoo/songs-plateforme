@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 
 interface ImageUploaderProps {
   slug?: string;
-  onUploaded: (path: string, type?: "image" | "video") => void;
+  onUploaded: (path: string, type?: "image" | "video", blobUrl?: string) => void;
   accept?: string;
 }
 
@@ -20,6 +20,9 @@ export function ImageUploader({ slug, onUploaded, accept = "image/*,video/mp4,vi
     setUploading(true);
     setProgress(0);
     setError(null);
+
+    // Blob URL for immediate preview — no need to wait for the server
+    const blobUrl = file.type.startsWith("image/") ? URL.createObjectURL(file) : undefined;
 
     const formData = new FormData();
     formData.append("file", file);
@@ -37,7 +40,7 @@ export function ImageUploader({ slug, onUploaded, accept = "image/*,video/mp4,vi
       if (xhr.status >= 200 && xhr.status < 300) {
         try {
           const data = JSON.parse(xhr.responseText);
-          onUploaded(data.path, data.type);
+          onUploaded(data.path, data.type, blobUrl);
         } catch {
           setError("Reponse invalide du serveur");
         }
