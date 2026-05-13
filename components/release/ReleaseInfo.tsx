@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { UpcomingBadge } from "@/components/ui/UpcomingBadge";
 import type { Release } from "@/types";
 
 interface ReleaseInfoProps {
@@ -52,6 +53,7 @@ export function ReleaseInfo({ release, categories }: ReleaseInfoProps) {
   const t = useTranslations("release");
   const genreLabel = categories?.find((c) => c.value === release.genre)?.label ?? release.genre;
 
+  const isUpcoming = release.status === "upcoming";
   const streamingEntries = Object.entries(release.streamingLinks).filter(
     ([, url]) => url
   ) as [string, string][];
@@ -101,8 +103,20 @@ export function ReleaseInfo({ release, categories }: ReleaseInfoProps) {
           </>
         )}
 
+        {/* Upcoming badge row */}
+        {isUpcoming && (
+          <>
+            <div className="md:border-r border-noir/15 py-4 sm:py-5 md:py-6 md:pr-6 border-b border-noir/10">
+              <span className="block mb-1">{t("status")}</span>
+            </div>
+            <div className="py-4 sm:py-5 md:py-6 md:pl-8 lg:pl-12 border-b border-noir/10 flex items-center">
+              <UpcomingBadge releaseDate={release.releaseDate} />
+            </div>
+          </>
+        )}
+
         {/* Streaming links */}
-        {streamingEntries.length > 0 && (
+        {!isUpcoming && streamingEntries.length > 0 && (
           <>
             <div className="md:border-r border-noir/15 py-4 sm:py-5 md:py-6 md:pr-6">
               <span className="block mb-1">{t("listenOn")}</span>

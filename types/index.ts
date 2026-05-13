@@ -64,6 +64,8 @@ export interface Release {
   scatter:        ScatterPosition;
   coverRatio?:    "square" | "landscape" | "portrait";
   coverCrop?:     CropRect;
+  status?:        "released" | "upcoming";
+  releaseDate?:   string; // ISO date string e.g. "2025-09-15"
 }
 
 export interface Label {

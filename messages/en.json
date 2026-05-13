@@ -24,7 +24,8 @@
     "noAudio":      "",
     "prevRelease":  "Previous release",
     "nextRelease":  "Next release",
-    "allReleases":  "All releases"
+    "allReleases":  "All releases",
+    "status":       "Status"
   },
   "about": {
     "bio":      "Bio",

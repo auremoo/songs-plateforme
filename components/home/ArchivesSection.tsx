@@ -4,6 +4,7 @@ import { useMemo, useState, useEffect } from "react";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { UpcomingBadge } from "@/components/ui/UpcomingBadge";
 import Image from "next/image";
 import type { Release, CropRect } from "@/types";
 
@@ -63,8 +64,11 @@ export function ArchivesSection({ releases, gridColumns = 5, mosaicOrder, mosaic
   const locale = useLocale() as "fr" | "en";
   const cols = useColumnCount(gridColumns);
 
+  const upcomingReleases = useMemo(() => releases.filter((r) => r.status === "upcoming"), [releases]);
+  const releasedReleases = useMemo(() => releases.filter((r) => r.status !== "upcoming"), [releases]);
+
   const tiles = useMemo<Tile[]>(() => {
-    const allTiles = releases.flatMap((release) => {
+    const allTiles = releasedReleases.flatMap((release) => {
       const main: Tile = {
         release,
         src: release.cover,
@@ -95,7 +99,7 @@ export function ArchivesSection({ releases, gridColumns = 5, mosaicOrder, mosaic
     }
 
     return allTiles;
-  }, [releases, mosaicOrder]);
+  }, [releasedReleases, mosaicOrder]);
 
   const columns = useMemo(() => {
     if (mosaicGrid && mosaicGrid.length === cols) {
@@ -134,6 +138,43 @@ export function ArchivesSection({ releases, gridColumns = 5, mosaicOrder, mosaic
 
   return (
     <section className="pt-16 sm:pt-20 pb-16 px-3 sm:px-4">
+      {/* Upcoming strip */}
+      {upcomingReleases.length > 0 && (
+        <div className="mb-10 sm:mb-14">
+          <p className="text-xs uppercase tracking-widest text-gris mb-4 sm:mb-6">À venir</p>
+          <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-2">
+            {upcomingReleases.map((release) => (
+              <Link
+                key={release.slug}
+                href={`/release/${release.slug}`}
+                className="group flex-none w-28 sm:w-36 md:w-44"
+              >
+                <div
+                  className="aspect-square relative overflow-hidden mb-2"
+                  style={{ backgroundColor: release.color }}
+                >
+                  {release.cover && (
+                    <Image
+                      src={release.cover}
+                      alt={release.title[locale]}
+                      fill
+                      className="object-cover scale-[1.005] transition-transform duration-700 group-hover:scale-110"
+                      unoptimized
+                      sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 176px"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-noir/0 group-hover:bg-noir/20 transition-colors duration-500" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <UpcomingBadge releaseDate={release.releaseDate} />
+                  </div>
+                </div>
+                <p className="text-xs font-medium truncate">{release.title[locale]}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className={`flex ${mosaicAlignBottom ? "items-stretch" : "items-start"}`} style={{ gap: `${gap}px` }}>
         {columns.map((column, colIdx) => (
           <div

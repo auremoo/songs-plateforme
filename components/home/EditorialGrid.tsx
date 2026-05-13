@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { CategoryFilter } from "./CategoryFilter";
 import { HoverPreview } from "./HoverPreview";
+import { UpcomingBadge } from "@/components/ui/UpcomingBadge";
 import type { Release, Genre } from "@/types";
 
 const DEFAULT_CATEGORIES = [
@@ -29,10 +30,13 @@ export function EditorialGrid({ releases, categories }: EditorialGridProps) {
   const [hoveredRelease, setHoveredRelease] = useState<Release | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
+  const upcomingReleases = releases.filter((r) => r.status === "upcoming");
+  const releasedReleases = releases.filter((r) => r.status !== "upcoming");
+
   const filtered =
     activeGenre === "all"
-      ? releases
-      : releases.filter((r) => r.genre === activeGenre);
+      ? releasedReleases
+      : releasedReleases.filter((r) => r.genre === activeGenre);
 
   const grouped = filtered.reduce<Record<string, Release[]>>((acc, r) => {
     (acc[r.year] ||= []).push(r);
@@ -49,6 +53,59 @@ export function EditorialGrid({ releases, categories }: EditorialGridProps) {
       <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 sm:mb-12 md:mb-16">
         {t("archives")}
       </h2>
+
+      {/* Upcoming releases — separate section, not filtered */}
+      {upcomingReleases.length > 0 && (
+        <div className="mb-16">
+          <p className="text-xs uppercase tracking-widest text-gris/70 mb-6">À venir</p>
+          <div className="hidden md:grid grid-cols-[100px_1fr_160px_160px] gap-6 text-xs text-gris/70 uppercase tracking-wider pb-5 border-b border-gris-clair/30">
+            <span>{t("year")}</span>
+            <span>{t("release")}</span>
+            <span>{t("type")}</span>
+            <span>{t("genre")}</span>
+          </div>
+          {upcomingReleases.map((release) => (
+            <Link
+              key={release.slug}
+              href={`/release/${release.slug}`}
+              className="group block"
+            >
+              {/* Desktop row */}
+              <div className="hidden md:grid grid-cols-[100px_1fr_160px_160px] gap-6 py-6 border-b border-gris-clair/20 items-start transition-colors group-hover:text-noir">
+                <span className="text-sm text-gris group-hover:text-noir transition-colors">
+                  {release.year}
+                </span>
+                <span className="text-lg font-medium flex items-center gap-3">
+                  {release.title[locale]}
+                  <UpcomingBadge releaseDate={release.releaseDate} />
+                </span>
+                <span className="text-sm text-gris group-hover:text-noir transition-colors normal-case">
+                  {release.releaseType}
+                </span>
+                <span className="text-xs text-gris uppercase tracking-wider group-hover:text-noir transition-colors">
+                  {catLabelMap[release.genre] ?? release.genre}
+                </span>
+              </div>
+              {/* Mobile card */}
+              <div className="md:hidden py-4 sm:py-6 border-b border-gris-clair/30">
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <span className="font-medium text-sm sm:text-base truncate min-w-0">
+                    {release.title[locale]}
+                  </span>
+                  <span className="text-xs text-gris flex-shrink-0">{release.year}</span>
+                </div>
+                <div className="flex items-center justify-between gap-3 text-xs text-gris mt-1">
+                  <UpcomingBadge releaseDate={release.releaseDate} />
+                  <span className="uppercase tracking-wider flex-shrink-0">
+                    {catLabelMap[release.genre] ?? release.genre}
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
+          <div className="mt-16" />
+        </div>
+      )}
 
       <div className="mb-16">
         <CategoryFilter active={activeGenre} onChange={setActiveGenre} categories={categories} />

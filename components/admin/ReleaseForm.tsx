@@ -34,6 +34,7 @@ const defaultRelease: Release = {
   streamingLinks: {},
   gallery: [],
   scatter: { x: 10, y: 10, width: 280, rotation: 0, zIndex: 1 },
+  status: "released",
 };
 
 const RELEASE_TYPES: { value: ReleaseType; label: string }[] = [
@@ -202,6 +203,28 @@ export function ReleaseForm({ initial, isNew = false, categories }: ReleaseFormP
           <label className={labelCls}>Année</label>
           <input type="text" value={release.year} onChange={(e) => update("year", e.target.value)} className={inputCls} />
         </div>
+      </div>
+
+      {/* Status */}
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className={labelCls}>Statut</label>
+          <select value={release.status ?? "released"} onChange={(e) => update("status", e.target.value)} className={inputCls}>
+            <option value="released">Sorti</option>
+            <option value="upcoming">À venir</option>
+          </select>
+        </div>
+        {release.status === "upcoming" && (
+          <div>
+            <label className={labelCls}>Date de sortie</label>
+            <input
+              type="date"
+              value={release.releaseDate ?? ""}
+              onChange={(e) => update("releaseDate", e.target.value || undefined)}
+              className={inputCls}
+            />
+          </div>
+        )}
       </div>
 
       {/* Featuring */}
